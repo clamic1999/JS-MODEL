@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODEL</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row bg-dark">
+            <h1 class="text-center bg-dark text-white">JS-STRING</h1>
+            <div class="col-md-12">
+                <div class="form-action text-center">
+                    <h1 class="display-6 fw-bold fs-2 text-white">String Methods</h1>
+                    <div class="count mt-2 border p-5">
+                    <h2 class="display-6 fw-bold fs-3 text-white">String Length</h2>   
+                     <input type ="text" name="string length" id="text" class="form-control text-center" placeholder="To find the string length" class="mb-2">
+                     <p id="demo" class="text-center bg-light text-dark mt-2"></p>
+                     <button onclick="length()" class="btn btn-warning text-white">String length</button>
+                 </div>
+
+                 <div class="count mt-2 border p-5">
+                 <h2 class="display-6 fw-bold fs-3 text-white">String Slice</h2>  
+                 <input type="text" name="String Slice" id="text slice" class="form-control text-center" placeholder="To find the String Slice" class="mb-2">
+                 <label for="First slice Word" class="text-light mt-2">First slice Word:</label>
+                 <input type="number" id="first-slice" placeholder="First slice Word">
+                 <label for="Last slice Word" class="text-light"> Last slice Word:</label>
+                 <input type="number" id="last-slice" placeholder="Last slice Word">                 
+                 <p id="demo1" class="text-center bg-light text-dark mt-2"></p>
+                 <button onclick="slice()" class="btn btn-warning text-white">String Slice</button>
+            </div>
+
+            <div class="count mt-2 border p-5">
+                <h2 class="fw-bold fs-3 text-white">Substring</h2>  
+                <input type="text" name="String Slice" id="text-substring" class="form-control text-center" placeholder="To find the String Slice" class="mb-2">
+                <label for="First slice Word" class="text-light mt-2">First slice Word:</label>
+                <input type="number" id="first-substring" placeholder="First slice Word">
+                <label for="Last slice Word" class="text-light"> Last slice Word:</label>
+                <input type="number" id="last-substring" placeholder="Last slice Word">                 
+                <p id="demo2" class="text-center bg-light text-dark mt-2"></p>
+                <button onclick="substring()" class="btn btn-warning text-white">String Slice</button>
+           </div>
+
+           <div class="count mt-2 border p-5">
+            <h2 class="fw-bold fs-3 text-white">String Replace</h2> 
+            <input type="text" name="String Replace" id="text-replace" class="form-control text-center" placeholder="To replace the current text into the new text" class="mb-2">
+            <label for="Current Word" class="text-light mt-2">Current Word:</label>
+            <input type="text" id="first-replace" placeholder="Current Word">
+            <label for="Replace Word" class="text-light">Replace Word:</label>
+            <input type="text" id="last-replace" placeholder="Current Word">                 
+            <p id="demo3" class="text-center bg-light text-dark mt-2"></p>
+            <button onclick="Replace()" class="btn btn-warning text-white">String Replace</button>
+           </div>
+
+           <div class="count mt-2 border p-5">
+            <h2 class="fw-bold fs-3 text-white">String ReplaceAll</h2>
+            <input type="text" name="String Replace" id="textreplaceAll" class="form-control text-center" placeholder="To replace the current text into the new text" class="mb-2">
+            <label for="Current line" class="text-light mt-2">Current Line:</label>
+            <input type="text" id="current-line" placeholder="Current Line">
+            <label for="Replace line" class="text-light mt-2"> Replace Line:</label>
+            <input type="text" id="replace-line" placeholder="Replace Line">
+            <p id="demo4" class="text-center bg-light text-dark mt-2"></p>
+            <button onclick="replaceAll()" class="btn btn-warning text-white"> String ReplaceAll</button>
+           </div>
+
+           <div class="count mt-2 border p-5">
+            <h2 class="fw-bold fs-3 text-white">String Upper Case & Lower Case</h2>
+            <input type="text" name="String uppercase & lowercase" id="textuppercase&lowercase" class="form-control text-center" placeholder="Transform To Upper Case & Lower Case" class="mb-2">
+            <p id="demo5" class="text-center bg-light text-dark mt-2"></p>
+            <p id="demo6" class="text-center bg-light text-dark mt-2"></p>
+            <button onclick="textUpperCase()" class="btn btn-warning text-white"> String Upper Case</button> 
+            <button onclick="textLowerCase()" class="btn btn-warning text-white"> String Lower Case</button>
+        </div>
+
+        <div class="count mt-2 border p-5">
+            <h2 class="fw-bold fs-3 text-white">String Concat</h2> 
+            <label for="Text 1">Text 1:</label>
+            <input type="text" id="Text1" placeholder="First word" >
+            <label for="Text 2">Text 2:</label>
+            <input type="text" id="Text2" placeholder="last word">
+            <p id="demo7" class="text-center bg-dark text-white mt-2"></p>
+            <button onclick="concat()" class="btn btn-warning text-white">String concat</button>
+        </div> 
+        
+        <div class="count mt-2 border p-5">
+            <h2 class="display-6 fw-bold fs-3 text-white">String Padding</h2>  
+            <input type ="text" name="string padding" id="text padding" class="form-control text-center" placeholder="To pad the string element" class="mb-2"><br>
+            <label for="First Pad Word">First Pad Word:</label>
+            <input type="text" id="first-pad" placeholder="First Pad Word">
+            <label for="Second Pad Word"> second Pad Word:</label>
+            <input type="text" id="second-pad" placeholder="Second Pad Word">
+            <p id="demo8" class="text-center bg-dark text-white mt-2"></p>
+            <p id="demo9" class="text-center bg-dark text-white mt-2"></p>
+            <button onclick="padStart()" class="btn btn-warning text-white">String Pad Start</button>
+            <button onclick="padEnd()" class="btn btn-warning text-white">String Pad End</button> 
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script> 
+</body>
+</html>
